@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mejllogotyp – kontroll</title>
+<style>
+  body { margin: 0; padding: 24px 16px; font: 14px/1.4 -apple-system, system-ui, sans-serif; background: #FFFFFF; color: #000; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p { margin: 0 0 16px; color: #4A4640; max-width: 46em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .cell { border-radius: 12px; padding: 20px 16px 12px; border: 1px solid rgba(0,0,0,0.1); }
+  .cell img { display: block; width: 151px; height: 43px; }
+  .cell small { display: block; margin-top: 12px; font-size: 12px; }
+  .zoom img { width: 302px; height: 86px; }
+</style>
+</head>
+<body>
+  <h1>Mejllogotyp – kontroll mot bakgrunder</h1>
+  <p>Visas i mejlstorlek 151 × 43 px (logotypen 149 × 41 pt plus 1 pt kant för ljuskanten). Ljus = mejlets bakgrund. Mörk = mallens mörka bakgrund. Gmail och Outlook mörkt = bakgrunder som de apparna kan sätta själva utan att ändra bilder [antagande om exakta färger].</p>
+  <div class="grid" id="grid"></div>
+<script>
+  const bgs = [
+    ["#F4F1EB", "Mejlets bakgrund (ljust)", "#000"],
+    ["#FBFAF6", "Kortet (ljust)", "#000"],
+    ["#FFFFFF", "Vit", "#000"],
+    ["#13120E", "Mallens mörka bakgrund", "#fff"],
+    ["#1F1F1F", "Gmail mörkt (ungefär)", "#fff"],
+    ["#000000", "Svart", "#fff"],
+  ];
+  const files = [["duovo-logotype@2x.png", "Standard (svart, ljus kant)"], ["duovo-logotype-white@2x.png", "Vit (för mörk-läges-CSS)"]];
+  const grid = document.getElementById("grid");
+  for (const [file, label] of files) for (const [bg, name, fg] of bgs) {
+    const c = document.createElement("div");
+    c.className = "cell"; c.style.background = bg; c.style.color = fg;
+    c.innerHTML = `<img src="../assets/email/${file}" alt="Duovo"><small>${label}<br>${name} ${bg}</small>`;
+    grid.append(c);
+  }
+</script>
+</body>
+</html>

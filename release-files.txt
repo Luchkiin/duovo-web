@@ -1,0 +1,12 @@
+# Files in docs/ that GitHub Pages would publish (sha256, bytes, path). Written by build.py --release.
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855        0  .nojekyll
+1bc2d03509c11229a32c45da5012d6e6681cb15a43e13e94ca44ed506773a349     6378  assets/email/duovo-logotype-white@2x.png
+fcec7e4e8afcbcac1307aab4ed9c15696ba3b81598ada2b03ce4682251ebfd0b    17350  assets/email/duovo-logotype@2x.png
+08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385    71592  assets/fonts/InstrumentSerif-Italic.ttf
+129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521     4405  assets/fonts/InstrumentSerif-OFL.txt
+071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc     4384  assets/fonts/Onest-OFL.txt
+966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31   193056  assets/fonts/Onest-Variable.ttf
+2a4d6f124672093b222015998783fe437911a65565c60cb67a6488dcd993cca8      567  assets/img/icon.svg
+910d7ae584bcd1f603c6e31c17ed7479fe97dbe423254daec1190ac3ed671035    12135  assets/site.css
+d02d2ba8707f98ee84e12911e3f56ee417fbfdeafb13db11608752f98dbdf231    21291  en/index.html
+4668515382d3183c412bf6b9e5f84625ed37a837c13c2ff54b22bf8761df92ca    21322  index.html

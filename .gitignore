@@ -1,0 +1,7 @@
+# Never in the public repository (see planning/Publiceringsplan.md). tools/check-public.py checks this too.
+preview/
+planning/
+REVIEW.md
+duovo-google-profil.png
+.DS_Store
+drafts/
