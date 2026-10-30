@@ -1,5 +1,6 @@
 # Files in docs/ that GitHub Pages would publish (sha256, bytes, path). Written by build.py --release.
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855        0  .nojekyll
+638e5d1a4a4c6cccb35a8b5321cb678e9196ec356cd9e87c9452e0c51ecaa023       10  CNAME
 1bc2d03509c11229a32c45da5012d6e6681cb15a43e13e94ca44ed506773a349     6378  assets/email/duovo-logotype-white@2x.png
 fcec7e4e8afcbcac1307aab4ed9c15696ba3b81598ada2b03ce4682251ebfd0b    17350  assets/email/duovo-logotype@2x.png
 08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385    71592  assets/fonts/InstrumentSerif-Italic.ttf

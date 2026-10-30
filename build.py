@@ -16,6 +16,9 @@ ASSETS = ROOT / "assets"  # CSS, fonts and email logos, copied into the built si
 RELEASE = "--release" in sys.argv
 OUT = ROOT / ("docs" if RELEASE else "preview")
 MANIFEST = ROOT / "release-files.txt"
+# Custom domain for GitHub Pages. --release writes it to docs/CNAME, so GitHub doesn't add its own commit
+# (domain verified on the GitHub account 2026-10-30, see planning/Domankoppling.md).
+DOMAIN = "duovo.app"
 
 # The pages in the first public version. Privacy and support stay drafts until their basis is decided.
 RELEASE_PAGES = ("home",)
@@ -356,8 +359,8 @@ if RELEASE and undecided:
     sys.exit(1)
 
 # Start from an empty output folder so nothing from an earlier build is left behind.
-# docs/ keeps only its Pages settings files (.nojekyll, and CNAME once a domain is set).
-KEEP = {".nojekyll", "CNAME"}
+# docs/ keeps only .nojekyll; the release build writes CNAME itself.
+KEEP = {".nojekyll"}
 OUT.mkdir(exist_ok=True)
 for item in OUT.iterdir():
     if item.name in KEEP:
@@ -373,6 +376,7 @@ shutil.copytree(ASSETS, OUT / "assets", ignore=shutil.ignore_patterns(".DS_Store
 shutil.copy(SRC / "logos/app-icon-small-light.svg", OUT / "assets/img/icon.svg")
 
 if RELEASE:
+    (OUT / "CNAME").write_text(DOMAIN + "\n")
     files = sorted(p for p in OUT.rglob("*") if p.is_file())
     lines = [f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.stat().st_size:>7}  {p.relative_to(OUT)}" for p in files]
     MANIFEST.write_text("# Files in docs/ that GitHub Pages would publish (sha256, bytes, path). Written by build.py --release.\n"

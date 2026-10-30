@@ -31,7 +31,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 | `drafts/pages.py` | Utkasten till integritet och support. **Lokalt, utesluten i `.gitignore`.** Utan filen bygger `build.py` bara startsidan, och `--release` behöver den aldrig |
 | `assets/` | Källfiler som kopieras in i bygget: `site.css` (appens färger, ljust och mörkt efter enhetens inställning), typsnitten Onest och Instrument Serif med sina OFL-licenser, och mejllogotyperna i `email/` |
 | `source/` | Kopior av Figma-exporterna (logotyp, symbol, appikon, ikoner), se `source/README.md` |
-| `docs/` | **Byggd.** Det GitHub Pages ska publicera. Redigeras inte för hand |
+| `docs/` | **Byggd.** Det GitHub Pages ska publicera, inklusive `CNAME` med domänen (`DOMAIN` i `build.py`). Redigeras inte för hand |
 | `release-files.txt` | **Byggd.** Exakt lista över filerna i `docs/`, med storlek och SHA-256 |
 | `preview/` | **Byggd.** Utkast av alla sidor med gula markeringar. Utesluten i `.gitignore` |
 | `tools/` | `check-public.py` (publiceringskontroll), `email-logo.swift` (gör mejllogotyperna), `email-logo-preview.html` (logotyperna mot olika bakgrunder) |
